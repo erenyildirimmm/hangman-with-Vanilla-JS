@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #363937;
+    color: #fff;
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+h1 {
+    margin-bottom: 0;
+}
+.container {
+    padding: 20px 20px;
+    height: 450px;
+    width: 450px;
+    position: relative;
+}
+
+.grafik {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 4px;
+}
+
+.item {
+    display: none;
+}
+
+#wrong-letters {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+#word {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.letter {
+    border-bottom: 3px solid yellowgreen;
+    font-size: 30px;
+    margin: 0 10px;
+    height: 40px;
+    width: 25px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#popup-container {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    background-color: green;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.3);
+}
+
+.popup h4 {
+    margin-bottom: 0;
+    border-bottom: 2px solid #fff;
+}
+
+.popup p {
+    margin-top: 3px;
+}
+
+#popup-container .popup button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#message {
+    background-color: rgba(0, 0, 0, .3);
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px 80px;
+    position: absolute;
+    bottom: -80px;
+    transition: transform 0.4s ease-in-out; 
+}
+
+#message.show {
+    transform: translateY(-80px);
+}
